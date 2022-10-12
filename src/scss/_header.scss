@@ -1,0 +1,54 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	width: 100%;
+	background-color: $c1;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		overflow-y: hidden;
+		opacity: 0;
+	}
+}
+
+.header__contacts {
+	font-size: fsz(10, 16);
+
+	li+li {
+		margin-top: 3px;
+	}
+}
+
+.init {
+	header {
+		.container {
+			height: auto;
+			align-items: center;
+			height: auto;
+			overflow-y: visible;
+			opacity: 1;
+		}
+	}
+}
+
+@media (min-width: 1201px) {
+	header {
+		.container {
+			height: 140px;
+			padding: 50px 112px 50px 0;
+
+		}
+	}
+
+	.index {
+		header {
+			.container {
+				padding-left: 70px;
+			}
+		}
+	}
+}

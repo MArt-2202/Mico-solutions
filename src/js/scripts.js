@@ -1,6 +1,7 @@
 'use strict';
 
 import debounce from './modules/debounce';
+import nodeStyles from './modules/nodeStyles';
 import blockPosition from './modules/blockPosition';
 import tableWrapper from './modules/tableWrapper';
 
@@ -35,6 +36,7 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
 	debounce(function () {
+		nodeStyles();
 		blockPosition();
 	}, 200);
 });

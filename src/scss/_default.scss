@@ -35,7 +35,7 @@ footer {
 
 main {
 	flex: 1 0 auto;
-	padding-top: 180px;
+	padding-top: 205px;
 }
 
 picture::selection,
@@ -137,6 +137,54 @@ picture {
 
 b {
 	font-weight: 700;
+}
+
+.main-nav ul,
+.contacts-nav {
+	margin-bottom: 0;
+}
+
+.main-nav {
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li+li {
+		margin-left: 17px;
+	}
+
+	a {
+		font-size: fsz(14, 16);
+		font-weight: 500;
+		line-height: 1;
+		color: $c4;
+
+		&:hover {
+			text-decoration: none;
+			color: $c3;
+		}
+	}
+}
+
+.contacts-nav {
+	margin-bottom: 0;
+	line-height: 1.2;
+	color: $c6;
+
+	a[href^="tel"] {
+		display: inline-block;
+		font-size: fsz(12, 16);
+		font-weight: 700;
+		line-height: 1;
+		color: $c7;
+
+		&:hover {
+			text-decoration: none;
+			color: $c3;
+		}
+	}
 }
 
 .list-img,

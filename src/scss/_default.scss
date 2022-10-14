@@ -35,7 +35,7 @@ footer {
 
 main {
 	flex: 1 0 auto;
-	padding-top: 205px;
+	padding-top: 65px;
 }
 
 picture::selection,
@@ -101,12 +101,13 @@ h1,
 h2,
 h3,
 h4 {
-	font-weight: 800;
 	line-height: 1.2;
 }
 
 h1,
 h2 {
+	margin-bottom: 34px;
+	font-weight: 800;
 	color: $c7;
 
 	a {
@@ -116,16 +117,13 @@ h2 {
 
 h3,
 h4 {
+	margin-bottom: 20px;
+	font-weight: 700;
 	color: $c3;
 
 	a {
 		color: $c3;
 	}
-}
-
-h1,
-h2 {
-	margin-bottom: 44px;
 }
 
 h1 {

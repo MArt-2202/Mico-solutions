@@ -57,7 +57,7 @@ p::selection,
 li::selection,
 input:not([type='checkbox']):not([type='radio'])::selection {
 	color: $c1;
-	background-color: $cb;
+	background-color: $c5;
 }
 
 .container {
@@ -95,6 +95,54 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 800;
+	line-height: 1.2;
+}
+
+h1,
+h2 {
+	color: $c7;
+
+	a {
+		color: $c7;
+	}
+}
+
+h3,
+h4 {
+	color: $c3;
+
+	a {
+		color: $c3;
+	}
+}
+
+h1,
+h2 {
+	margin-bottom: 44px;
+}
+
+h1 {
+	font-size: fsz(27, 16);
+}
+
+h2 {
+	font-size: fsz(25, 16);
+	letter-spacing: 0.03em;
+}
+
+h3 {
+	font-size: fsz(24, 16);
+}
+
+h4 {
+	font-size: fsz(15, 16);
 }
 
 p,
@@ -136,7 +184,7 @@ picture {
 }
 
 b {
-	font-weight: 700;
+	font-weight: 800;
 }
 
 .main-nav ul,
@@ -178,7 +226,7 @@ b {
 	a[href^="tel"] {
 		display: inline-block;
 		font-size: fsz(12, 16);
-		font-weight: 700;
+		font-weight: 800;
 		line-height: 1;
 		color: $c7;
 

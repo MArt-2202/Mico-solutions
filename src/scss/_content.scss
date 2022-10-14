@@ -371,12 +371,19 @@
 		&:hover {
 			text-decoration: none;
 
-			.our-work-list__cursor {
-				top: 50%;
-				transform: translate(-50%, -50%);
-				animation: fillAnimation 1s ease-in-out infinite forwards alternate;
+			.video-wrapper {
+				z-index: 2;
 			}
 		}
+	}
+
+	.video-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
 	}
 
 	.list-img {

@@ -510,7 +510,7 @@ const watchChanges = async () => {
 	watch(`${dirs.source}/img/flags/*.svg`, svgImg);
 	watch(`${dirs.source}/svg/*.svg`, svgSprite);
 	watch(`${dirs.source}/svg/*.svg`, svgSpriteFillDelete);
-	// watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
+	watch(`${dirs.source}/video/*.{mp4,jpg}`, copyVideo);
 	// watch(`${dirs.source}/js/partials/*.{js, min.js}`, copyAddJSFiles);
 	watch(`${dirs.source}/plugins/**/*.js`, plugins);
 
@@ -532,7 +532,7 @@ exports.default = series(
 		svgImg,
 		svgSprite,
 		svgSpriteFillDelete,
-		// copyVideo,
+		copyVideo,
 		copyFavicon,
 		// copyAddJSFiles,
 		script,

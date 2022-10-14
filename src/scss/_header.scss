@@ -3,6 +3,8 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		overflow-y: hidden;
 		opacity: 0;
 	}
@@ -32,16 +34,17 @@ header {
 	header {
 		.container {
 			height: 140px;
-			padding: 50px 112px 50px 0;
-
+			padding-top: 50px;
+			padding-bottom: 50px;
 		}
 	}
+}
 
-	.index {
-		header {
-			.container {
-				padding-left: 70px;
-			}
+@media (min-width: 1231px) {
+	header {
+		.container {
+			padding-left: 70px;
+			padding-right: 70px;
 		}
 	}
 }

@@ -74,11 +74,13 @@
 
 .btn {
 	display: inline-block;
-	padding: 13px 20px 11px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 40px;
 	font-size: fsz(14, 16);
-	line-height: 1;
-	border-radius: 5px;
+	line-height: 40px;
 	border: 1px solid transparent;
+	text-align: center;
 
 	&:hover {
 		text-decoration: none;
@@ -96,12 +98,27 @@
 	}
 }
 
+.btn-primary {
+	background-color: $c3;
+	color: $c1;
+	border-color: $c3;
+
+	&:hover {
+		background-color: $c14;
+		border-color: $c14;
+	}
+}
+
+.btn-style-1 {
+	border-radius: 5px;
+}
+
 .style-1 {
 	margin-bottom: 96px;
 }
 
 @media (max-width: 1024px) {
 	.style-1 {
-		margin-bottom: 56px;
+		margin-bottom: 66px;
 	}
 }

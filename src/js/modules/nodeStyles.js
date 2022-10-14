@@ -63,4 +63,37 @@ export default function nodeStyles() {
 			}
 		});
 	}
+
+	if (document.querySelector('#our-work-list a')) {
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						const target = entry.target;
+
+						if (target.dataset.video && target.dataset.video !== '') {
+							const videoSrc = target.dataset.video,
+								posterSrc = target.querySelector('img')?.getAttribute('src');
+
+							target.insertAdjacentHTML(
+								'beforeend',
+								`
+									<div class="video-wrapper">
+										<video muted autoplay loop playsinline poster="${posterSrc}">
+											<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${videoSrc}">
+										</video>
+									</div>
+								`
+							);
+						}
+						observer.unobserve(target);
+					}
+				});
+			},
+			{
+				rootMargin: '50px',
+			}
+		);
+		document.querySelectorAll('#our-work-list a').forEach((item) => observer.observe(item));
+	}
 }

@@ -1,11 +1,4 @@
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 998;
-	width: 100%;
-	background-color: $c1;
-
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -50,5 +43,16 @@ header {
 				padding-left: 70px;
 			}
 		}
+	}
+}
+
+@media (max-width: 1200px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 998;
+		width: 100%;
+		background-color: $c1;
 	}
 }

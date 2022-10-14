@@ -95,3 +95,13 @@
 		color: $c1;
 	}
 }
+
+.style-1 {
+	margin-bottom: 96px;
+}
+
+@media (max-width: 1024px) {
+	.style-1 {
+		margin-bottom: 56px;
+	}
+}

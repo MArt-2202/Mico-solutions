@@ -64,7 +64,7 @@ export default function nodeStyles() {
 		});
 	}
 
-	if (document.querySelector('#our-work-list a')) {
+	if (document.querySelector('.desktop-user-agent #our-work-list a')) {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
 				entries.forEach((entry) => {

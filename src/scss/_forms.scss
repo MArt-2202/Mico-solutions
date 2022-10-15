@@ -45,7 +45,6 @@ textarea {
 .style-check {
 	position: relative;
 	display: inline-block;
-	padding-left: 15px;
 	line-height: 1.2;
 	cursor: pointer;
 
@@ -54,30 +53,89 @@ textarea {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 7px;
-		height: 7px;
 		overflow: hidden;
 		clip: rect(0 0 0 0);
 
 		&+span,
 		&+span {
 			position: absolute;
-			top: 5px;
 			left: 0;
+			@include trs;
+		}
+
+		&:checked+span,
+		&:checked+span {
+			-webkit-pointer-events: none;
+			-moz-pointer-events: none;
+			pointer-events: none;
+		}
+	}
+}
+
+.style-check-1 {
+	padding-left: 15px;
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		width: 7px;
+		height: 7px;
+
+		&+span,
+		&+span {
+			top: 5px;
 			width: 7px;
 			height: 7px;
 			border: 1px solid $c3;
 			background-color: $c1;
-			@include trs;
+		}
+
+		&:checked+span,
+		&:checked+span {
+			background-color: $c3;
 		}
 	}
+}
 
-	input[type='radio']:checked+span,
-	input[type='checkbox']:checked+span {
-		background-color: $c3;
-		-webkit-pointer-events: none;
-		-moz-pointer-events: none;
-		pointer-events: none;
+.style-check-2 {
+	padding-left: 30px;
+	font-size: fsz(18, 16);
+	font-weight: 500;
+	line-height: 1.1;
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		width: 18px;
+		height: 18px;
+
+		&+span,
+		&+span {
+			top: 1px;
+			width: 18px;
+			height: 18px;
+			border: 2px solid $c1;
+			border-radius: 4px;
+			color: $c1;
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 8px;
+				height: 6px;
+				background-image: url("data:image/svg+xml,%0A%3Csvg width='8' height='6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 3 2.25 2L7 1' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+				opacity: 0;
+				@include trs-all;
+			}
+		}
+
+		&:checked+span,
+		&:checked+span {
+			&:after {
+				opacity: 1;
+			}
+		}
 	}
 }
 

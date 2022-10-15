@@ -93,4 +93,36 @@
 			border-color: $c5;
 		}
 	}
+
+	&.form-style-1 {
+		>div {
+			padding-left: 0;
+			padding-right: 0;
+
+			&+div {
+				margin-top: 0;
+			}
+		}
+
+		input:not([type=checkbox]):not([type=radio]):not([type=hidden]):not([type=file]),
+		select {
+			height: 40px;
+			padding-left: 15px;
+			padding-right: 15px;
+			border-radius: 5px;
+			border: 1px solid rgba($c1, 0.5);
+			color: $c1;
+
+			&:focus {
+				border-color: rgba($c1, 1);
+			}
+		}
+
+		input:not([type='checkbox']):not([type='radio']),
+		textarea {
+			@include placeholder {
+				color: rgba($c1, 0.5);
+			}
+		}
+	}
 }

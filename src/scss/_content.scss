@@ -536,10 +536,70 @@
 	DISQUS
 ============================
 */
-// .disqus {
-// 	padding-top: 100px;
-// 	padding-bottom: 100px;
-// }
+.disqus {
+	.container {
+		padding-top: 90px;
+	}
+}
+
+.disqus__content {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	gap: 100px;
+	align-items: flex-end;
+	width: calc(min(740px, 100%));
+	margin-left: auto;
+	margin-right: auto;
+	color: $c1;
+
+	>div {
+		width: 50%;
+
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+
+	h2 {
+		font-size: fsz(50, 16);
+		color: $c1;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 30px;
+		font-size: fsz(30, 16);
+		font-weight: 700;
+		line-height: 1.1;
+
+		span {
+			position: relative;
+			top: -20px;
+			display: inline-block;
+			font-size: 1rem;
+			font-weight: 300;
+			line-height: 1;
+		}
+	}
+}
+
+.disqus__list {
+	margin-bottom: 0;
+
+	li+li {
+		margin-top: 17px;
+	}
+}
+
+.disqus__form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 16px;
+	width: calc(min(356px, 100%));
+}
 
 /*
 ============================

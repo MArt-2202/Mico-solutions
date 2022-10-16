@@ -151,7 +151,6 @@ h4 {
 	font-size: fsz(15, 16);
 }
 
-p,
 ul,
 ol,
 blockquote,
@@ -161,7 +160,8 @@ blockquote,
 }
 
 p {
-	line-height: 1.5;
+	margin-bottom: 20px;
+	line-height: 1.35;
 }
 
 a {
@@ -339,98 +339,43 @@ video {
 }
 
 .breadcrumbs {
-	margin-bottom: 20px;
 
 	li,
-	a {
-		position: relative;
+	a,
+	span {
 		display: inline-block;
-		color: $cb;
 	}
 
 	li {
-		margin-right: 5px;
-		padding-right: 16px;
 		margin-bottom: 10px;
 
-		&:after {
-			content: '—';
-			position: absolute;
-			right: 0;
-			top: 7px;
-			font-size: 8px;
-			color: currentColor;
+		&:not(:last-child) {
+			margin-right: 8px;
 		}
 
 		&:last-child {
-			margin-right: 0;
-			padding-right: 0;
-
 			a {
 				pointer-events: none;
 				text-decoration: none;
-				font-weight: 300;
-				opacity: 0.5;
-			}
-
-			&:after {
-				display: none;
 			}
 		}
-
-		a,
-		a+span {
-
-			display: inline-block;
-			color: $cb;
-		}
-
-		a {
-			position: relative;
-
-			&+span {
-				pointer-events: none;
-				text-decoration: none;
-				font-weight: 300;
-				opacity: 0.5;
-			}
-		}
-	}
-
-	a,
-	a+span {
-		font-size: fsz(10, 16);
-		font-weight: 400;
-		line-height: 1.25;
-		color: $cb;
 	}
 
 	a {
-		position: relative;
-		display: inline-block;
-		margin-right: 5px;
-		padding-right: 16px;
-		margin-bottom: 10px;
-
-		&:after {
-			content: '—';
-			position: absolute;
-			right: 0;
-			top: 2px;
-			font-size: 8px;
-			color: currentColor;
-		}
+		font-size: fsz(11, 16);
+		font-weight: 300;
+		line-height: 1.25;
 
 		&:hover {
 			color: $c5;
 			text-decoration: none;
 		}
 	}
+}
 
-	.breadcrumb_last {
-		pointer-events: none;
-		font-weight: 300;
-		opacity: 0.5;
+@media (min-width: 1025px) {
+	.breadcrumbs {
+		padding-left: 35px;
 	}
 }
 

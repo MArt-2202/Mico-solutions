@@ -97,6 +97,14 @@ input:not([type='checkbox']):not([type='radio'])::selection {
 	}
 }
 
+@media (min-width: 1025px) {
+
+	h1,
+	h2 {
+		padding-left: 35px;
+	}
+}
+
 h1,
 h2,
 h3,

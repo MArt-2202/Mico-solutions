@@ -144,6 +144,17 @@
 	}
 }
 
+@media (min-width: 1231px) {
+	.style-3 {
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+
+	.style-4 {
+		margin-left: 70px;
+	}
+}
+
 @media (max-width: 1024px) {
 	.style-1 {
 		margin-bottom: 66px;

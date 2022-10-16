@@ -163,6 +163,10 @@
 			}
 		}
 	}
+
+	.request__back {
+		color: $c1;
+	}
 }
 
 @media (min-width: 1231px) {
@@ -362,7 +366,6 @@
 	transform: rotateY(180deg);
 	font-weight: 800;
 	line-height: 1.2;
-	color: $c1;
 }
 
 /*

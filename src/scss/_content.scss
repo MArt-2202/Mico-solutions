@@ -78,6 +78,10 @@
 		color: $c1;
 	}
 
+	.services-list-1 {
+		color: $c1;
+	}
+
 	.services-list-2 {
 		li {
 			background-color: rgba($c3, 0.2);
@@ -158,19 +162,14 @@
 			padding-right: 70px;
 		}
 
-		h1 {
-			margin-left: 30px;
-		}
-
 		.services-list-1 {
-			margin-left: 45px;
+			margin-left: 50px;
 		}
 	}
 }
 
 .services-list {
 	margin-bottom: 0;
-	color: $c1;
 }
 
 .services-list-1 {
@@ -198,7 +197,8 @@
 .services-list-2 {
 	li {
 		padding: 30px 35px 26px 105px;
-		background-color: rgba($c3, 0.2);
+		color: $c1;
+		background-color: $c3;
 
 		&+li {
 			margin-top: 14px;
@@ -523,14 +523,6 @@
 	}
 }
 
-@media (min-width: 1025px) {
-	.our-works {
-		h2 {
-			margin-left: 35px;
-		}
-	}
-}
-
 /*
 ============================
 	DISQUS
@@ -564,6 +556,7 @@
 	}
 
 	h2 {
+		padding-left: 0;
 		font-size: fsz(50, 16);
 		color: $c1;
 	}

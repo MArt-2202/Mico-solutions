@@ -81,6 +81,7 @@
 	line-height: 40px;
 	border: 1px solid transparent;
 	text-align: center;
+	border-radius: 5px;
 
 	&:hover {
 		text-decoration: none;
@@ -109,6 +110,16 @@
 	}
 }
 
+.btn-info {
+	color: $c16;
+	border-color: $c16;
+
+	&:hover {
+		color: $c3;
+		border-color: $c3;
+	}
+}
+
 .btn-style-1 {
 	border-radius: 5px;
 }
@@ -118,6 +129,8 @@
 }
 
 .style-2 {
+	position: relative;
+
 	.container {
 		position: relative;
 		padding-top: 100px;
@@ -177,14 +190,14 @@
 
 	span {
 		position: absolute;
-		font-weight: 800;
+		font-weight: 700;
 		line-height: 1;
 		color: rgba($c7, 0.03);
 
 		b {
 			display: block;
 			padding-left: 130px;
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 }

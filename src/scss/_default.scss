@@ -115,7 +115,7 @@ h4 {
 h1,
 h2 {
 	margin-bottom: 34px;
-	font-weight: 700;
+	font-weight: 800;
 	color: $c7;
 
 	a {
@@ -226,18 +226,32 @@ b {
 .contacts-nav {
 	margin-bottom: 0;
 	line-height: 1.2;
-	color: $c1;
+	color: $c6;
 
 	a[href^="tel"] {
 		display: inline-block;
 		font-size: fsz(12, 16);
 		font-weight: 700;
 		line-height: 1;
-		color: $c1;
+		color: $c7;
 
 		&:hover {
 			text-decoration: none;
 			color: $c3;
+		}
+	}
+}
+
+.index {
+	.contacts-nav {
+		color: $c1;
+
+		a[href^="tel"] {
+			color: $c1;
+
+			&:hover {
+				color: $c3;
+			}
 		}
 	}
 }

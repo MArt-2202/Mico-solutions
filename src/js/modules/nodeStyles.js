@@ -64,6 +64,14 @@ export default function nodeStyles() {
 		});
 	}
 
+	document.body.addEventListener('input', function (e) {
+		const target = e.target;
+
+		if (target.hasAttribute('data-valid-phone')) {
+			target.value = target.value.replace(/\D/g, '');
+		}
+	});
+
 	if (document.querySelector('.desktop-user-agent #our-work-list a')) {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {

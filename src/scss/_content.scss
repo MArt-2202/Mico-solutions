@@ -674,19 +674,14 @@
 
 .our-work-list__info {
 	position: absolute;
+	display: flex;
+	gap: 15px 26px;
+	align-items: center;
+	flex-wrap: wrap;
 	left: mp(40, 590);
 	right: mp(40, 590);
 	bottom: mp(38, 360);
 	z-index: 1;
-
-	div {
-		display: inline-block;
-		vertical-align: middle;
-
-		&:not(:last-child) {
-			margin-right: 26px;
-		}
-	}
 
 	img {
 		max-width: 100px;

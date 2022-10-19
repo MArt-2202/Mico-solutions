@@ -125,4 +125,24 @@
 			}
 		}
 	}
+
+	@media (max-width: 576px) {
+		font-size: 1rem;
+
+		.btn {
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 360px) {
+		>div {
+			&+.btn {
+				margin-top: 15px;
+			}
+		}
+
+		ul {
+			margin-bottom: 15px;
+		}
+	}
 }

@@ -4,6 +4,7 @@ import debounce from './modules/debounce';
 import nodeStyles from './modules/nodeStyles';
 import blockPosition from './modules/blockPosition';
 import tableWrapper from './modules/tableWrapper';
+import toggleContent from './modules/toggleContent';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -25,7 +26,7 @@ if (isMobile()) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
-	// toggleContent();
+	toggleContent();
 }); // END READY
 
 window.addEventListener('resize', () => {
@@ -39,4 +40,12 @@ window.addEventListener('load', () => {
 		nodeStyles();
 		blockPosition();
 	}, 200);
+});
+
+window.addEventListener('scroll', (e) => {
+	if (scrollY > 10) {
+		document.querySelector('.index header').classList.add('header-style');
+	} else {
+		document.querySelector('.index header').classList.remove('header-style');
+	}
 });

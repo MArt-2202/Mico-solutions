@@ -532,7 +532,7 @@
 	strong {
 		display: block;
 		margin-bottom: 20px;
-		font-size: fsz(28, 16);
+		font-size: fsz(27, 16);
 		font-weight: 800;
 		line-height: 1.2;
 	}
@@ -542,6 +542,68 @@
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.our-advantages__list {
+		grid-template-columns: repeat(2, 1fr);
+
+		strong,
+		p {
+			margin-bottom: 10px;
+		}
+
+		strong {
+			font-size: fsz(25, 16);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.our-advantages__list {
+		strong {
+			font-size: fsz(23, 14);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.our-advantages__list {
+		gap: 20px;
+
+		li {
+			padding: 18px 20px 17px 20px;
+		}
+
+		strong {
+			font-size: fsz(20, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.our-advantages__list {
+		gap: 20px;
+
+		li {
+			padding: 18px 20px 17px 20px;
+		}
+
+		strong {
+			font-size: fsz(16, 14);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.our-advantages__list {
+		grid-template-columns: 1fr;
+		gap: 15px;
+
+		li {
+			padding: 13px 15px 12px 15px;
 		}
 	}
 }

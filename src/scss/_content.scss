@@ -12,7 +12,8 @@
 	}
 
 	.content-1,
-	.content-4 {
+	.content-4,
+	.content-5 {
 		align-items: center;
 	}
 
@@ -57,6 +58,10 @@
 	.content-3__aside {
 		width: 50%;
 	}
+
+	.content-5__aside {
+		width: 300px;
+	}
 }
 
 @media (min-width: 1201px) {
@@ -68,6 +73,16 @@
 @media (max-width: 1025px) and (max-width: 1200px) {
 	.content-2 {
 		gap: mp(70, 1200);
+	}
+}
+
+.content-6 {
+	display: flex;
+	gap: 70px mp(70, 760);
+
+	>div {
+		flex-grow: 1;
+		width: 50%;
 	}
 }
 

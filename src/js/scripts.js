@@ -43,9 +43,11 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', (e) => {
-	if (scrollY > 10) {
-		document.querySelector('.index header').classList.add('header-style');
-	} else {
-		document.querySelector('.index header').classList.remove('header-style');
+	if (document.querySelector('.index header')) {
+		if (scrollY > 10) {
+			document.querySelector('.index header').classList.add('header-style');
+		} else {
+			document.querySelector('.index header').classList.remove('header-style');
+		}
 	}
 });

@@ -1284,11 +1284,23 @@
 	}
 }
 
-@media (min-width: 1025px) {
+.info__img {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 30px;
+}
+
+@media (max-width: 1024px) {
 	.info__img {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 30px;
+		align-items: center;
+	}
+}
+
+@media (max-width: 576px) {
+	.info {
+		p {
+			font-size: fsz(15, 14);
+		}
 	}
 }

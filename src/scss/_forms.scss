@@ -107,7 +107,6 @@ textarea {
 		width: 18px;
 		height: 18px;
 
-		&+span,
 		&+span {
 			top: 1px;
 			width: 18px;
@@ -142,6 +141,13 @@ textarea {
 @media (max-width: 576px) {
 	.style-check-2 {
 		font-size: fsz(16, 14);
+
+		input[type='radio'],
+		input[type='checkbox'] {
+			&+span {
+				top: 0;
+			}
+		}
 	}
 }
 

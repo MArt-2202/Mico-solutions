@@ -944,6 +944,99 @@
 	width: calc(min(356px, 100%));
 }
 
+@media (max-width: 1024px) {
+	.disqus {
+		.container {
+			padding-top: 62px;
+		}
+	}
+
+	.disqus__content {
+		gap: 50px;
+
+		h2 {
+			font-size: fsz(40, 16);
+		}
+
+		strong {
+			font-size: fsz(25, 16);
+
+			span {
+				top: -12px;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.disqus {
+		.container {
+			padding-top: 67px;
+		}
+	}
+
+	.disqus__content {
+		flex-direction: column;
+		align-items: center;
+		gap: 38px;
+
+		>div {
+			width: 100%;
+
+			&:first-child {
+				align-items: center;
+			}
+		}
+
+		strong {
+			display: none;
+			font-size: fsz(20, 16);
+			text-align: center;
+
+			span {
+				top: -12px;
+			}
+		}
+
+		h2 {
+			font-size: fsz(30, 16);
+
+			&+strong {
+				display: block;
+			}
+		}
+	}
+
+	.disqus__form {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 576px) {
+	.disqus__content {
+		strong {
+			font-size: fsz(16, 14);
+		}
+
+		h2 {
+			font-size: fsz(23, 14);
+		}
+	}
+}
+
+@media (max-width: 415px) {
+	.disqus__form {
+		width: 100%;
+	}
+}
+
+@media (max-width: 360px) {
+	.disqus__form {
+		grid-template-columns: 1fr;
+	}
+}
+
 /*
 ============================
 	SERVICES

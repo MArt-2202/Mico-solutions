@@ -100,6 +100,17 @@
 	}
 }
 
+@media (max-width: 576px) {
+	.content-6 {
+		flex-direction: column;
+		gap: 20px;
+
+		>div {
+			width: 100%;
+		}
+	}
+}
+
 /*
 ============================
 	TOP SECTION

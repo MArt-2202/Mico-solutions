@@ -6,7 +6,10 @@ export default function blockPosition() {
 		bl4 = document.querySelector('.header__contact-btn'),
 		bl5 = document.querySelector('.header__bl-2'),
 		bl6 = document.querySelector('.header__bl-3'),
-		bl7 = document.querySelector('.header__bl-4');
+		bl7 = document.querySelector('.header__bl-4'),
+		bl8 = document.querySelector('.disqus strong'),
+		bl9 = document.querySelector('.disqus h2'),
+		bl10 = document.querySelector('.disqus__content > div:last-child');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -37,6 +40,9 @@ export default function blockPosition() {
 			document.body.classList.add('min-769');
 
 			if (document.querySelector('.min-769')) {
+				if (bl8 && bl10) {
+					bl10.prepend(bl8);
+				}
 			}
 		}
 	}
@@ -112,6 +118,9 @@ export default function blockPosition() {
 			document.body.classList.add('max-768');
 
 			if (document.querySelector('.max-768')) {
+				if (bl9 && bl8) {
+					bl9.after(bl8);
+				}
 			}
 		}
 	}

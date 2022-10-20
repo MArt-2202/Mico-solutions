@@ -139,6 +139,12 @@ textarea {
 	}
 }
 
+@media (max-width: 576px) {
+	.style-check-2 {
+		font-size: fsz(16, 14);
+	}
+}
+
 .style-select {
 	position: relative;
 

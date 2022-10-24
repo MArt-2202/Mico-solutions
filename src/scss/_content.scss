@@ -210,10 +210,11 @@
 	}
 
 	.request__back {
+		color: $c1;
 		background-color: $c3;
 
 		h4 {
-			color: $cb;
+			color: $c1;
 		}
 	}
 }
@@ -240,6 +241,12 @@
 @media (max-width: 1200px) {
 	.top-section {
 		margin-top: -110px;
+	}
+}
+
+@media (max-width:576px) {
+	.top-section {
+		margin-top: -78px;
 	}
 }
 
@@ -541,6 +548,14 @@
 
 		h4 {
 			margin-bottom: 15px;
+		}
+	}
+
+	.request__back {
+		font-size: 1rem;
+
+		h4 {
+			font-size: fsz(16, 14);
 		}
 	}
 }

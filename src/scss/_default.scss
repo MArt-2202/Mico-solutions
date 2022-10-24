@@ -44,6 +44,12 @@ main {
 	}
 }
 
+@media (max-width: 576px) {
+	main {
+		padding-top: 78px;
+	}
+}
+
 picture::selection,
 img::selection,
 table th::selection,

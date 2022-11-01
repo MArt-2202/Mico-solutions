@@ -1,6 +1,27 @@
 @media (min-width: 1025px) {
 	.content {
 		display: flex;
+
+		.request {
+			height: 100%;
+		}
+
+		.content__aside {
+			position: relative;
+		}
+
+		.request__front,
+		.request__back {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.request__content,
+		.request__front,
+		.request__back {
+			height: 100%;
+		}
 	}
 
 	.content__main {
@@ -25,6 +46,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			min-height: 100%;
+			gap: 15px;
 
 			li+li {
 				margin-top: 0;
@@ -341,14 +363,6 @@ h1+.top-section__add {
 @media (max-width: 1200px) {
 	.top-section {
 		margin-top: -110px;
-	}
-}
-
-@media (max-width: 1024px) {
-	.top-section-style-1 {
-		h1 {
-			font-size: fsz(40, 16);
-		}
 	}
 }
 
@@ -1436,5 +1450,93 @@ h1+.top-section__add {
 		p {
 			font-size: fsz(15, 14);
 		}
+	}
+}
+
+/*
+============================
+	CONTACTS
+============================
+*/
+.contacts__content {
+	display: flex;
+}
+
+.contacts__aside {
+	padding: 60px 20px 55px 60px;
+	background-color: $c7;
+}
+
+.contacts__list {
+	margin-bottom: 0;
+	font-weight: 300;
+	line-height: 1.34;
+	color: $c1;
+
+	li+li {
+		margin-top: 26px;
+	}
+
+	strong {
+		display: block;
+		margin-bottom: 4px;
+		font-weight: 700;
+		line-height: 1;
+	}
+}
+
+@media (min-width: 577px) {
+	.contacts__list {
+		font-size: fsz(15, 16);
+	}
+}
+
+@media (min-width: 1025px) {
+	.contacts__aside {
+		flex: none;
+		order: 1;
+		width: 370px;
+	}
+
+	.contacts__main {
+		flex-grow: 1;
+	}
+
+	.contacts__map {
+		height: 100%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contacts__content {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.contacts__map {
+		padding-top: 65%;
+	}
+}
+
+@media (max-width: 576px) {
+	.contacts__aside {
+		padding: 40px 20px 35px 20px;
+	}
+}
+
+@media (max-width: 415px) {
+	.contacts__map {
+		padding-top: 75%;
+	}
+}
+
+@media (max-width: 360px) {
+	.contacts__aside {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.contacts__map {
+		padding-top: 100%;
 	}
 }

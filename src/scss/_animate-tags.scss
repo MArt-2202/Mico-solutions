@@ -2,6 +2,8 @@ h1,
 h2,
 h3,
 h4,
+.top-section .btn,
+.s_ocial li,
 .services-list-1 li,
 .services-list-2 li,
 .services-list-3 li,
@@ -23,6 +25,8 @@ h4,
 	h2,
 	h3,
 	h4,
+	.top-section .btn,
+	.s_ocial li,
 	.services-list-1 li,
 	.services-list-2 li,
 	.services-list-3 li,
@@ -45,6 +49,12 @@ h4,
 	@for $i from 1 through 5 {
 		.services__img-#{$i} {
 			animation-delay: $i * 0.15s;
+		}
+
+		.s_ocial {
+			li:nth-child(#{$i}) {
+				animation-delay: $i * 0.15s;
+			}
 		}
 	}
 

@@ -34,7 +34,8 @@
 
 	.content-1,
 	.content-4,
-	.content-5 {
+	.content-5,
+	.content-8 {
 		align-items: center;
 	}
 
@@ -71,11 +72,13 @@
 		width: 495px;
 	}
 
-	.content-3__main {
+	.content-3__main,
+	.content-8__main {
 		order: 1;
 	}
 
-	.content-4 {
+	.content-4,
+	.content-8 {
 		gap: 70px;
 	}
 
@@ -86,6 +89,10 @@
 
 	.content-5__aside {
 		width: 300px;
+	}
+
+	.content-8__aside {
+		width: mp(496, 1060);
 	}
 
 	.content-7__main {
@@ -369,6 +376,14 @@ h1+.top-section__add {
 @media (max-width:576px) {
 	.top-section {
 		margin-top: -78px;
+	}
+}
+
+@media (max-width: 360px) {
+	.top-section__add {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
 	}
 }
 
@@ -1414,7 +1429,7 @@ h1+.top-section__add {
 ============================
 */
 .info {
-	p {
+	h1~p {
 		font-size: fsz(15, 16);
 		font-weight: 300;
 
@@ -1447,7 +1462,7 @@ h1+.top-section__add {
 
 @media (max-width: 576px) {
 	.info {
-		p {
+		h1~p {
 			font-size: fsz(15, 14);
 		}
 	}
@@ -1538,5 +1553,92 @@ h1+.top-section__add {
 
 	.contacts__map {
 		padding-top: 100%;
+	}
+}
+
+/*
+============================
+	TEAM
+============================
+*/
+.team {
+	h2 {
+		text-align: center;
+	}
+}
+
+.team__slider-wrapper {
+	position: relative;
+	padding-left: 70px;
+	padding-right: 70px;
+
+	.swiper-slide {
+		width: 204px;
+	}
+
+	.slider-btn {
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		transform: translateY(-50%);
+		color: $c2;
+		cursor: pointer;
+
+		svg {
+			width: 30px;
+			height: 30px;
+			fill: currentColor;
+			@include trs-all;
+		}
+
+		&:hover {
+			color: $c3;
+		}
+	}
+
+	.slider-btn--prev {
+		left: 8px;
+	}
+
+	.slider-btn--next {
+		right: 8px;
+	}
+
+	.list-style-1 a .list-img {
+		padding-top: 147.3%;
+	}
+}
+
+@media (max-width: 1024px) {
+	.team__slider-wrapper {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+@media (max-width: 576px) {
+	.team__slider-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+
+		.slider-btn--prev {
+			left: 13px;
+		}
+
+		.slider-btn--next {
+			right: 13px;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.team__slider-wrapper {
+		.slider-btn--prev {
+			left: 8px;
+		}
+
+		.slider-btn--next {
+			right: 8px;
+		}
 	}
 }

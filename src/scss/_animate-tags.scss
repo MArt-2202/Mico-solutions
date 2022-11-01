@@ -4,6 +4,7 @@ h3,
 h4,
 .top-section .btn,
 .s_ocial li,
+.contacts__list li,
 .services-list-1 li,
 .services-list-2 li,
 .services-list-3 li,
@@ -13,6 +14,7 @@ h4,
 .services__img,
 .info__img picture,
 .info p,
+.list-1>div,
 .disqus__list li,
 .disqus__content strong,
 .disqus__form div {
@@ -27,6 +29,7 @@ h4,
 	h4,
 	.top-section .btn,
 	.s_ocial li,
+	.contacts__list li,
 	.services-list-1 li,
 	.services-list-2 li,
 	.services-list-3 li,
@@ -36,6 +39,7 @@ h4,
 	.services__img,
 	.info__img picture,
 	.info p,
+	.list-1>div,
 	.disqus__list li,
 	.disqus__content strong,
 	.disqus__form div {
@@ -51,8 +55,20 @@ h4,
 			animation-delay: $i * 0.15s;
 		}
 
-		.s_ocial {
+		.social {
 			li:nth-child(#{$i}) {
+				animation-delay: $i * 0.15s;
+			}
+		}
+
+		.contacts__list {
+			li:nth-child(#{$i}) {
+				animation-delay: $i * 0.15s;
+			}
+		}
+
+		.list-1 {
+			>div:nth-child(#{$i}) {
 				animation-delay: $i * 0.15s;
 			}
 		}
@@ -108,6 +124,9 @@ h4,
 	h2,
 	h3,
 	h4,
+	.top-section .btn,
+	.s_ocial li,
+	.contacts__list li,
 	.services-list-1 li,
 	.services-list-2 li,
 	.services-list-3 li,
@@ -117,6 +136,7 @@ h4,
 	.services__img,
 	.info__img picture,
 	.info p,
+	.list-1>div,
 	.disqus__list li,
 	.disqus__content strong,
 	.disqus__form div {

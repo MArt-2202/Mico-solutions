@@ -140,6 +140,11 @@
 	}
 }
 
+.style-7 {
+	max-height: 300px;
+	overflow: hidden;
+}
+
 @media (min-width: 1231px) {
 	.style-3 {
 		padding-left: 70px;
@@ -152,6 +157,10 @@
 
 	.style-5 {
 		padding-left: 70px;
+	}
+
+	.style-6 {
+		padding-right: 70px;
 	}
 }
 

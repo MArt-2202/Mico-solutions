@@ -7,6 +7,7 @@ import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import blocksStyles from './modules/blocksStyles';
+import sliders from './modules/sliders';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
 	toggleContent();
 	blocksStyles();
+	sliders();
 	scrollAnimateNodes({
 		node: 'h1, h2, h3, h4',
 		animatedClass: 'flipInX',
@@ -43,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		animatedClass: 'slideInUp',
 	});
 	scrollAnimateNodes({
-		node: '.top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong',
+		node: '.top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong, .list-1>div',
 		animatedClass: 'fadeIn',
 	});
 }); // END READY

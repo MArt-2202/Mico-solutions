@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		animatedClass: 'slideInUp',
 	});
 	scrollAnimateNodes({
-		node: '.services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong',
+		node: '.top-section .btn, .s_ocial li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong',
 		animatedClass: 'fadeIn',
 	});
 }); // END READY

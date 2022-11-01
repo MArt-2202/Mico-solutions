@@ -294,3 +294,53 @@
 		padding-top: 17px;
 	}
 }
+
+.s_ocial {
+	margin-bottom: 0;
+
+	li,
+	a {
+		display: inline-block;
+	}
+
+	li {
+		vertical-align: middle;
+
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+	}
+
+	a {
+		&:hover {
+			color: $c5;
+			text-decoration: none;
+		}
+	}
+
+	svg {
+		fill: currentColor;
+		@include trs;
+	}
+}
+
+.s_ocial__b_ehance {
+	svg {
+		width: 20px;
+		height: 13px;
+	}
+}
+
+.s_ocial__u_pwork {
+	svg {
+		width: 24px;
+		height: 17px;
+	}
+}
+
+.s_ocial__f_acebook {
+	svg {
+		width: 11px;
+		height: 18px;
+	}
+}

@@ -405,6 +405,7 @@ video {
 
 .map-wrapper {
 	position: relative;
+	overflow: hidden;
 
 	iframe {
 		position: absolute;

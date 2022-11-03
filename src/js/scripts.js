@@ -6,7 +6,6 @@ import blockPosition from './modules/blockPosition';
 import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
-import blocksStyles from './modules/blocksStyles';
 import sliders from './modules/sliders';
 
 if ('ontouchstart' in document.documentElement) {
@@ -30,7 +29,6 @@ if (isMobile()) {
 document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
 	toggleContent();
-	blocksStyles();
 	sliders();
 	scrollAnimateNodes({
 		node: 'h1, h2, h3, h4',

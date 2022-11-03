@@ -23,7 +23,7 @@
 }
 
 .list-style-1 {
-	a {
+	>div>div {
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -41,20 +41,6 @@
 				height: 145px;
 				background: linear-gradient(360deg, $c7 0%, rgba($c17, 0) 84.67%);
 				@include trs-all;
-			}
-		}
-
-		&:hover {
-			text-decoration: none;
-
-			.list-img {
-				&:after {
-					height: 70%;
-				}
-			}
-
-			.list-style-1__info {
-				bottom: 30px;
 			}
 		}
 	}

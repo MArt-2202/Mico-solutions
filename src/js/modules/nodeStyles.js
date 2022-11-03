@@ -87,7 +87,7 @@ export default function nodeStyles() {
 								'beforeend',
 								`
 									<div class="video-wrapper">
-										<video muted autoplay loop playsinline poster="${posterSrc}">
+										<video muted playsinline poster="${posterSrc}">
 											<source type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' src="${videoSrc}">
 										</video>
 									</div>
@@ -103,5 +103,47 @@ export default function nodeStyles() {
 			}
 		);
 		document.querySelectorAll('#our-work-list a').forEach((item) => observer.observe(item));
+
+		document
+			.querySelector('.desktop-user-agent #our-work-list')
+			.addEventListener('mouseover', function (e) {
+				const target = e.target;
+
+				if (target.closest('video')) {
+					target.closest('video').play();
+				}
+			});
+
+		document
+			.querySelector('.desktop-user-agent #our-work-list')
+			.addEventListener('mouseleave', function (e) {
+				const target = e.target;
+
+				if (target.closest('video')) {
+					target.closest('video').currentTime = 0;
+				}
+			});
+	}
+
+	if (document.querySelector('.map-wrapper')) {
+		const observer = new IntersectionObserver(
+			(entries, observer) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting && entry.target.dataset.src) {
+						entry.target.insertAdjacentHTML(
+							'beforeend',
+							`
+									<iframe src="${entry.target.dataset.src}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+								`
+						);
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				rootMargin: '50px',
+			}
+		);
+		document.querySelectorAll('.map-wrapper').forEach((item) => observer.observe(item));
 	}
 }

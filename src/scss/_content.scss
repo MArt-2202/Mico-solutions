@@ -897,18 +897,10 @@ h1+.top-section__add {
 
 .our-work-list__info {
 	position: absolute;
-	display: flex;
-	gap: 15px 26px;
-	align-items: center;
-	flex-wrap: wrap;
 	left: mp(40, 590);
 	right: mp(40, 590);
 	bottom: mp(38, 360);
 	z-index: 1;
-
-	img {
-		max-width: 100px;
-	}
 
 	span,
 	strong {
@@ -918,19 +910,8 @@ h1+.top-section__add {
 	}
 
 	span {
-		position: relative;
-		padding-left: 15px;
 		font-size: fsz(12, 16);
 		color: $c1;
-
-		svg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 8px;
-			height: 12px;
-			fill: currentColor;
-		}
 
 		&+strong {
 			margin-top: 2px;
@@ -987,16 +968,8 @@ h1+.top-section__add {
 		right: 20px;
 		bottom: 20px;
 
-		img {
-			max-width: 70px;
-		}
-
 		span {
 			font-size: fsz(10, 14);
-
-			svg {
-				top: -1px;
-			}
 		}
 
 		strong {
@@ -1011,22 +984,6 @@ h1+.top-section__add {
 
 		a {
 			padding-top: 55%;
-		}
-	}
-
-	.our-work-list__info {
-		top: 20px;
-		flex-direction: column;
-		gap: 10px;
-		justify-content: center;
-		text-align: center;
-
-		span {
-			display: inline-block;
-
-			&+strong {
-				margin-top: 5px;
-			}
 		}
 	}
 }

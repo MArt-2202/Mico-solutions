@@ -24,11 +24,9 @@ export default function nodeStyles() {
 
 	if (
 		document.querySelector('#request-form__phone') &&
-		document.querySelector('#request-form__site') &&
 		document.querySelector('#request-form__submit')
 	) {
 		const formPhone = document.querySelector('#request-form__phone'),
-			formSite = document.querySelector('#request-form__site'),
 			formSubmit = document.querySelector('#request-form__submit');
 
 		if (document.querySelector('#request-form')) {
@@ -51,12 +49,7 @@ export default function nodeStyles() {
 			} else {
 				formPhone.classList.remove('required');
 			}
-			if (formSite.value === '') {
-				formSite.classList.add('required');
-			} else {
-				formSite.classList.remove('required');
-			}
-			if (formPhone.value !== '' && formSite.value !== '') {
+			if (formPhone.value !== '') {
 				if (document.querySelector('#request')) {
 					document.querySelector('#request').classList.add('success');
 				}
@@ -145,5 +138,26 @@ export default function nodeStyles() {
 			}
 		);
 		document.querySelectorAll('.map-wrapper').forEach((item) => observer.observe(item));
+	}
+
+	if (document.querySelector('.request-form')) {
+		document.querySelector('.request-form').addEventListener('change', function (e) {
+			if (
+				document.querySelector('#request-form__site') &&
+				document.querySelector('#request-form__variant-site') &&
+				document.querySelector('#request-form__variant-design')
+			) {
+				const target = e.target,
+					input = document.querySelector('#request-form__site'),
+					labelSite = target.closest('#request-form__variant-site'),
+					labelDesign = target.closest('#request-form__variant-design');
+
+				if (labelSite?.checked || labelDesign?.checked) {
+					input.classList.add('db');
+				} else {
+					input.classList.remove('db');
+				}
+			}
+		});
 	}
 }

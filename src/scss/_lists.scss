@@ -46,7 +46,7 @@
 	}
 }
 
-.list-style-1__info {
+div.list-style-1__info {
 	position: absolute;
 	left: 20px;
 	right: 20px;
@@ -72,7 +72,7 @@
 }
 
 @media (max-width: 576px) {
-	.list-style-1__info {
+	div.list-style-1__info {
 		p {
 			font-size: fsz(10, 14);
 		}
@@ -80,7 +80,7 @@
 }
 
 @media (max-width: 360px) {
-	.list-style-1__info {
+	div.list-style-1__info {
 		left: 15px;
 		right: 15px;
 		bottom: 13px;
@@ -88,7 +88,7 @@
 }
 
 @media (max-width: 320px) {
-	.list-style-1__info {
+	div.list-style-1__info {
 		font-size: fsz(10, 14);
 
 		p {

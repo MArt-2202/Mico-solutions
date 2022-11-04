@@ -7,6 +7,7 @@ import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import sliders from './modules/sliders';
+import animatedBackground from './modules/animatedBackground';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		node: '.top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong, .list-1>div',
 		animatedClass: 'fadeIn',
 	});
+	animatedBackground();
 }); // END READY
 
 window.addEventListener('resize', () => {

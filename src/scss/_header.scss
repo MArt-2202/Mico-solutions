@@ -12,7 +12,7 @@ header {
 }
 
 .header__contacts {
-	font-size: fsz(10, 16);
+	font-size: fsz(12, 16);
 
 	li+li {
 		margin-top: 3px;
@@ -121,6 +121,10 @@ header {
 	.toggle-btn {
 		position: relative;
 		z-index: 9999;
+	}
+
+	.header__bl-1 {
+		top: 5px;
 	}
 
 	.header__bl-2,

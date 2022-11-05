@@ -9,7 +9,12 @@ export default function blockPosition() {
 		bl7 = document.querySelector('.header__bl-4'),
 		bl8 = document.querySelector('.disqus strong'),
 		bl9 = document.querySelector('.disqus h2'),
-		bl10 = document.querySelector('.disqus__content > div:last-child');
+		bl10 = document.querySelector('.disqus__content > div:last-child'),
+		bl11 = document.querySelector('.top-section-style-2 .content-2__main'),
+		bl12 = document.querySelector('.top-section-style-2 .content-2__aside'),
+		bl13 = document.querySelector('.top-section-style-2 .request'),
+		bl14 = document.querySelector('.top-section-style-2 .request__content'),
+		bl15 = document.querySelector('.top-section-style-2 .request__front');
 
 	if (window.matchMedia('(min-width: 361px)').matches) {
 		document.body.classList.remove('max-360');
@@ -54,6 +59,18 @@ export default function blockPosition() {
 			document.body.classList.add('min-1025');
 
 			if (document.querySelector('.min-1025')) {
+				if (bl11 && bl12) {
+					bl12.style.minHeight = `${bl11.offsetHeight}px`;
+				}
+				if (bl11 && bl13) {
+					bl13.style.minHeight = `${bl11.offsetHeight}px`;
+				}
+				if (bl11 && bl14) {
+					bl14.style.minHeight = `${bl11.offsetHeight}px`;
+				}
+				if (bl11 && bl15) {
+					bl15.style.minHeight = `${bl11.offsetHeight}px`;
+				}
 			}
 		}
 	}
@@ -106,6 +123,18 @@ export default function blockPosition() {
 
 			if (document.querySelector('.max-1024')) {
 				if (document.querySelector('.max-1024')) {
+					if (bl12) {
+						bl12.style.minHeight = '';
+					}
+					if (bl13) {
+						bl13.style.minHeight = '';
+					}
+					if (bl14) {
+						bl14.style.minHeight = '';
+					}
+					if (bl15) {
+						bl15.style.minHeight = '';
+					}
 				}
 			}
 		}

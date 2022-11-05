@@ -7,6 +7,7 @@ import tableWrapper from './modules/tableWrapper';
 import toggleContent from './modules/toggleContent';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import sliders from './modules/sliders';
+import formValidation from './modules/formValidation';
 import animatedBackground from './modules/animatedBackground';
 
 if ('ontouchstart' in document.documentElement) {
@@ -46,6 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrollAnimateNodes({
 		node: '.top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong, .list-1>div',
 		animatedClass: 'fadeIn',
+	});
+	formValidation({
+		container: '.request',
+		form: '#request-form',
+		input: '#request-form__phone',
+		submitBtn: '#request-form__submit',
+	});
+	formValidation({
+		container: '.disqus-wrapper',
+		form: '#disqus-form',
+		input: '#disqus-form__phone',
+		submitBtn: '#disqus-form__submit',
 	});
 	animatedBackground();
 }); // END READY

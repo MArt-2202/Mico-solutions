@@ -7,6 +7,30 @@ export default function nodeStyles() {
 		document.body.classList.add('inner');
 	}
 
+	if (
+		document.querySelector('.top-section-style-2 .content-2__main') &&
+		document.querySelector('.top-section-style-2 .content-2__aside')
+	) {
+		const main = document.querySelector('.top-section-style-2 .content-2__main'),
+			aside = document.querySelector('.top-section-style-2 .content-2__aside');
+		if (window.matchMedia('(min-width: 1025px)').matches) {
+			aside.style.minHeight = `${main.offsetHeight}px`;
+			document.querySelector(
+				'.top-section-style-2 .content-2__aside .request'
+			).style.minHeight = `${main.offsetHeight}px`;
+			document.querySelector(
+				'.top-section-style-2 .content-2__aside .request__content'
+			).style.minHeight = `${main.offsetHeight}px`;
+
+			document.querySelector(
+				'.top-section-style-2 .content-2__aside .request__front'
+			).style.minHeight = `${main.offsetHeight}px`;
+		}
+		if (window.matchMedia('(max-width: 1024px)').matches) {
+			aside.style.minHeight = '';
+		}
+	}
+
 	if (document.querySelector('#our-work-list a')) {
 		document.querySelectorAll('#our-work-list a').forEach((el) => {
 			const itemHref = el.getAttribute('href');

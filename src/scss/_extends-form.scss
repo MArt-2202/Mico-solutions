@@ -23,6 +23,11 @@
 		margin-top: 7px;
 	}
 
+	input,
+	textarea {
+		border-radius: none;
+	}
+
 	.btn,
 	input:not([type='checkbox']):not([type='radio']):not([type='hidden']),
 	button {
@@ -43,7 +48,7 @@
 		}
 
 		&.required {
-			border-bottom-color: $c15;
+			border-color: $c15;
 		}
 	}
 
@@ -115,6 +120,10 @@
 
 			&:focus {
 				border-color: rgba($c1, 1);
+			}
+
+			&.required {
+				border-color: $c15;
 			}
 		}
 

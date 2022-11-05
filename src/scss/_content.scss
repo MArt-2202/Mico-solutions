@@ -357,7 +357,17 @@ h1+.top-section__add {
 			width: 174px;
 			height: 174px;
 		}
+	}
 
+	.top-section-style-2 {
+		h1 {
+			margin-bottom: 34px;
+		}
+
+		.content__aside,
+		.content-2__aside {
+			height: 100%;
+		}
 	}
 }
 
@@ -712,7 +722,7 @@ h1+.top-section__add {
 
 	.request__front,
 	.request__back {
-		padding: 18px 20px 20px 20px;
+		padding: 27px 20px 30px 20px;
 
 		h4 {
 			margin-bottom: 15px;
@@ -778,7 +788,8 @@ h1+.top-section__add {
 
 	.request__front,
 	.request__back {
-		padding: 14px 15px 15px 15px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
 

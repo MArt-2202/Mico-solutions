@@ -7,33 +7,6 @@ export default function nodeStyles() {
 		document.body.classList.add('inner');
 	}
 
-	if (
-		document.querySelector('.top-section-style-2 .content-2__main') &&
-		document.querySelector('.top-section-style-2 .content-2__aside')
-	) {
-		const main = document.querySelector('.top-section-style-2 .content-2__main'),
-			aside = document.querySelector('.top-section-style-2 .content-2__aside'),
-			addBlock1 = document.querySelector('.top-section-style-2 .content-2__aside .request'),
-			addBlock2 = document.querySelector(
-				'.top-section-style-2 .content-2__aside .request__content'
-			),
-			addBlock3 = document.querySelector(
-				'.top-section-style-2 .content-2__aside .request__front'
-			);
-		if (window.matchMedia('(min-width: 1025px)').matches) {
-			aside.style.minHeight = `${main.offsetHeight}px`;
-			addBlock1.style.minHeight = `${main.offsetHeight}px`;
-			addBlock2.style.minHeight = `${main.offsetHeight}px`;
-			addBlock3.style.minHeight = `${main.offsetHeight}px`;
-		}
-		if (window.matchMedia('(max-width: 1024px)').matches) {
-			aside.style.minHeight = '';
-			addBlock1.style.minHeight = '';
-			addBlock2.style.minHeight = '';
-			addBlock3.style.minHeight = '';
-		}
-	}
-
 	if (document.querySelector('#our-work-list a')) {
 		document.querySelectorAll('#our-work-list a').forEach((el) => {
 			const itemHref = el.getAttribute('href');

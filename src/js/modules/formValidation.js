@@ -1,4 +1,10 @@
-export default function formValidation({ container, form: wrapper, input, submitBtn }) {
+export default function formValidation({
+	container,
+	form: wrapper,
+	input,
+	submitBtn,
+	sucessClass,
+}) {
 	if (
 		document.querySelector(wrapper) &&
 		document.querySelector(input) &&
@@ -28,7 +34,7 @@ export default function formValidation({ container, form: wrapper, input, submit
 			}
 			if (formInput.value !== '') {
 				if (document.querySelector(container)) {
-					document.querySelector(container).classList.add('success');
+					document.querySelector(container).classList.add(sucessClass);
 				}
 			}
 		});

@@ -8,6 +8,7 @@ import toggleContent from './modules/toggleContent';
 import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import sliders from './modules/sliders';
 import formValidation from './modules/formValidation';
+import sendFormData from './modules/sendFormData';
 import animatedBackground from './modules/animatedBackground';
 
 if ('ontouchstart' in document.documentElement) {
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	tableWrapper();
 	toggleContent();
 	sliders();
+	nodeStyles();
 	scrollAnimateNodes({
 		node: 'h1, h2, h3, h4',
 		animatedClass: 'flipInX',
@@ -53,12 +55,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		form: '#request-form',
 		input: '#request-form__phone',
 		submitBtn: '#request-form__submit',
+		sucessClass: 'success',
+		valid: 'data-valid',
 	});
 	formValidation({
 		container: '.disqus-wrapper',
 		form: '#disqus-form',
 		input: '#disqus-form__phone',
 		submitBtn: '#disqus-form__submit',
+		sucessClass: 'success',
+		valid: 'data-valid',
+	});
+	sendFormData({
+		wrapper: '.form',
+		submitBtn: '#request-form__submit',
+		inputs: [
+			{
+				key: 'phone',
+				tag: '#request-form__phone',
+				required: true,
+			},
+			{
+				key: 'site',
+				tag: '#request-form__site',
+				required: false,
+			},
+		],
+		url: '/s/send',
+		typeForm: 1,
+	});
+	sendFormData({
+		wrapper: '.disqus__content',
+		submitBtn: '#disqus-form__submit',
+		inputs: [
+			{
+				key: 'phone',
+				tag: '#disqus-form__phone',
+				required: true,
+			},
+		],
+		url: '/s/send',
+		typeForm: 2,
 	});
 	animatedBackground();
 }); // END READY
@@ -71,7 +108,6 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('load', () => {
 	debounce(function () {
-		nodeStyles();
 		blockPosition();
 	}, 200);
 });

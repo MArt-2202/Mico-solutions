@@ -204,7 +204,7 @@
 	}
 
 	.request__front {
-		h4 {
+		>strong {
 			color: $c1;
 		}
 
@@ -400,6 +400,13 @@ h1+.top-section__add {
 @media (max-width:576px) {
 	.top-section {
 		margin-top: -78px;
+	}
+
+	.request__front {
+		>strong {
+			padding-left: 15px;
+			font-size: fsz(15, 14);
+		}
 	}
 
 	.top-section-style-1 {
@@ -705,6 +712,17 @@ h1+.top-section__add {
 	backface-visibility: hidden;
 }
 
+.request__front {
+	>strong {
+		display: block;
+		margin-bottom: 20px;
+		font-size: fsz(15, 16);
+		font-weight: 700;
+		line-height: 1.2;
+		color: $c3;
+	}
+}
+
 .request__back {
 	display: flex;
 	flex-direction: column;
@@ -775,7 +793,7 @@ h1+.top-section__add {
 		}
 	}
 
-	.request__front h4 {
+	.request__front>strong {
 		padding-left: 15px;
 	}
 

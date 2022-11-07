@@ -6,31 +6,34 @@
 				<ul>
 					<li>
 						<label class="style-check style-check-1">
-							<input type="radio" name="request-form__variant" checked>
+							<input type="radio" id="request-form__variant-new-site" name="request-form__variant"
+								value="new_site" checked>
 							<span></span>
 							New site
 						</label>
 					</li>
 					<li>
 						<label class="style-check style-check-1">
-							<input type="radio" id="request-form__variant-site" name="request-form__variant">
+							<input type="radio" id="request-form__variant-site" name="request-form__variant"
+								value="audit_site">
 							<span></span>
 							Free audit of your site
 						</label>
 					</li>
 					<li>
 						<label class="style-check style-check-1">
-							<input type="radio" id="request-form__variant-design" name="request-form__variant">
+							<input type="radio" id="request-form__variant-design" name="request-form__variant"
+								value="design_site">
 							<span></span>
 							Free design concept
 						</label>
 					</li>
 				</ul>
 				<div>
-					<input type="tel" data-valid-phone id="request-form__phone" placeholder="Phone">
+					<input type="tel" data-valid id="request-form__phone" placeholder="Phone">
 				</div>
 				<div>
-					<input id="request-form__site" placeholder="Site">
+					<input id="request-form__site" placeholder="Site" class="dn">
 				</div>
 				<a href="javascript:void(0)" class="btn btn-primary" id="request-form__submit">Send request</a>
 			</div>

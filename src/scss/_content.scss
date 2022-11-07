@@ -83,7 +83,8 @@
 	}
 
 	.content-4__main,
-	.content-3__aside {
+	.content-3__aside,
+	.content-4__aside {
 		width: 50%;
 	}
 
@@ -549,6 +550,25 @@ h1+.top-section__add {
 	}
 }
 
+@media (min-width: 1025px) {
+	.services-style-1 {
+		.content-3__main {
+			order: -1;
+		}
+	}
+}
+
+@media (min-width: 1231px) {
+	.services-style-1 {
+
+		h1,
+		.breadcrumbs {
+			padding-left: 70px;
+		}
+	}
+
+}
+
 @media (max-width: 1200px) {
 	.services-list-3 {
 		a {
@@ -686,10 +706,6 @@ h1+.top-section__add {
 			margin-bottom: 0;
 		}
 	}
-}
-
-#request-form__site {
-	display: none;
 }
 
 @media (max-width: 576px) {

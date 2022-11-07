@@ -22,14 +22,6 @@ export default function nodeStyles() {
 		});
 	}
 
-	document.body.addEventListener('input', function (e) {
-		const target = e.target;
-
-		if (target.hasAttribute('data-valid-phone')) {
-			target.value = target.value.replace(/\D/g, '');
-		}
-	});
-
 	if (document.querySelector('.desktop-user-agent #our-work-list a')) {
 		const observer = new IntersectionObserver(
 			(entries, observer) => {
@@ -109,18 +101,20 @@ export default function nodeStyles() {
 		document.querySelector('.request-form').addEventListener('change', function (e) {
 			if (
 				document.querySelector('#request-form__site') &&
+				document.querySelector('#request-form__variant-new-site') &&
 				document.querySelector('#request-form__variant-site') &&
 				document.querySelector('#request-form__variant-design')
 			) {
 				const target = e.target,
 					input = document.querySelector('#request-form__site'),
-					labelSite = target.closest('#request-form__variant-site'),
+					labelSite = target.closest('#request-form__variant-new-site'),
+					labelAudit = target.closest('#request-form__variant-site'),
 					labelDesign = target.closest('#request-form__variant-design');
 
-				if (labelSite?.checked || labelDesign?.checked) {
-					input.classList.add('db');
-				} else {
-					input.classList.remove('db');
+				if (labelAudit?.checked || labelDesign?.checked) {
+					input.classList.remove('dn');
+				} else if (labelSite?.checked) {
+					input.classList.add('dn');
 				}
 			}
 		});

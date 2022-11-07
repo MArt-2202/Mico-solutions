@@ -4,6 +4,7 @@ export default function formValidation({
 	input,
 	submitBtn,
 	sucessClass,
+	valid,
 }) {
 	if (
 		document.querySelector(wrapper) &&
@@ -15,14 +16,20 @@ export default function formValidation({
 			formSubmit = document.querySelector(submitBtn);
 
 		form.addEventListener('input', function (e) {
+			const target = e.target.closest('input');
+
+			if (target.hasAttribute(valid)) {
+				target.value = target.value.replace(/\D/g, '');
+				target.classList.add('required');
+			}
 			if (
-				e.target.closest('input') &&
-				e.target.closest('input').value === '' &&
-				!e.target.closest('input').classList.contains('required')
+				target &&
+				target.value === '' &&
+				target.hasAttribute(valid) &&
+				!target.classList.contains('required')
 			) {
-				e.target.closest('input').classList.add('required');
 			} else {
-				e.target.closest('input').classList.remove('required');
+				target.classList.remove('required');
 			}
 		});
 
@@ -34,7 +41,9 @@ export default function formValidation({
 			}
 			if (formInput.value !== '') {
 				if (document.querySelector(container)) {
-					document.querySelector(container).classList.add(sucessClass);
+					if (sucessClass !== '') {
+						document.querySelector(container).classList.add(sucessClass);
+					}
 				}
 			}
 		});

@@ -83,7 +83,7 @@ export default function nodeStyles() {
 						entry.target.insertAdjacentHTML(
 							'beforeend',
 							`
-									<iframe src="${entry.target.dataset.src}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<iframe src="${entry.target.dataset.src}" allowfullscreen title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								`
 						);
 						observer.unobserve(entry.target);

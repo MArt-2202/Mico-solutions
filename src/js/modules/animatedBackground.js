@@ -29,7 +29,7 @@ export default function animatedBackground() {
 			target = { x: width / 2, y: height / 2 };
 
 			animateWrapper = document.querySelector('#animate-wrapper');
-			animateWrapper.style.height = height + 'px';
+			animateWrapper.style.minHeight = height + 'px';
 
 			canvas = document.querySelector('#canvas');
 			canvas.width = width;

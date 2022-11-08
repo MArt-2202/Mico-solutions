@@ -7,20 +7,20 @@ export default function nodeStyles() {
 		document.body.classList.add('inner');
 	}
 
-	if (document.querySelector('#our-work-list a')) {
-		document.querySelectorAll('#our-work-list a').forEach((el) => {
-			const itemHref = el.getAttribute('href');
+	// if (document.querySelector('#our-work-list a')) {
+	// 	document.querySelectorAll('#our-work-list a').forEach((el) => {
+	// 		const itemHref = el.getAttribute('href');
 
-			if (itemHref !== '#' && itemHref !== 'javascript:void(0)') {
-				if (el.querySelector('span')) {
-					const itemTitle = document.createElement('strong');
+	// 		if (itemHref !== '#' && itemHref !== 'javascript:void(0)') {
+	// 			if (el.querySelector('span')) {
+	// 				const itemTitle = document.createElement('strong');
 
-					itemTitle.textContent = itemHref;
-					el.querySelector('span').after(itemTitle);
-				}
-			}
-		});
-	}
+	// 				itemTitle.textContent = itemHref;
+	// 				el.querySelector('span').after(itemTitle);
+	// 			}
+	// 		}
+	// 	});
+	// }
 
 	if (document.querySelector('.desktop-user-agent #our-work-list a')) {
 		const observer = new IntersectionObserver(

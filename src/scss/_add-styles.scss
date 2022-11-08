@@ -78,7 +78,7 @@
 	padding-right: 20px;
 	height: 40px;
 	font-size: fsz(14, 16);
-	line-height: 40px;
+	line-height: 38px;
 	border: 1px solid transparent;
 	text-align: center;
 	border-radius: 5px;
@@ -101,9 +101,9 @@
 }
 
 .btn-primary {
-	background-color: $c3;
+	background-color: $c7;
 	color: $c1;
-	border-color: $c3;
+	border-color: $c7;
 
 	&:hover {
 		background-color: $c14;

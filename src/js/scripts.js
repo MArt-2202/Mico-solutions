@@ -9,6 +9,7 @@ import scrollAnimateNodes from './modules/scrollAnimateNodes';
 import sliders from './modules/sliders';
 import formValidation from './modules/formValidation';
 import sendFormData from './modules/sendFormData';
+import scrollToAnchor from './modules/scrollToAnchor';
 import animatedBackground from './modules/animatedBackground';
 
 if ('ontouchstart' in document.documentElement) {
@@ -43,11 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		animatedClass: 'flipInY',
 	});
 	scrollAnimateNodes({
-		node: '.our-advantages__list li, .our-works__list li, .disqus__list li, .disqus__form div',
+		node: '.our-advantages__list li, .our-works__list li, .disqus__list li, .disqus__form div, .anchor-list li',
 		animatedClass: 'slideInUp',
 	});
 	scrollAnimateNodes({
-		node: '.top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong, .list-1>div',
+		node: '.top-section p, .top-section .btn, .s_ocial li, .contacts__list li, .services-list-1 li, .services-list-2 li, .services-list-3 li, .services__img, .info__img picture, .info p, .disqus__content strong, .list-1>div',
 		animatedClass: 'fadeIn',
 	});
 	formValidation({
@@ -103,12 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
 	debounce(function () {
 		blockPosition();
+		scrollToAnchor();
 	}, 200);
 });
 
 window.addEventListener('load', () => {
 	debounce(function () {
 		blockPosition();
+		scrollToAnchor();
 	}, 200);
 });
 

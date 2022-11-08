@@ -46,6 +46,10 @@
 	}
 }
 
+.list-style-2 {
+	column-gap: mp(40, 450);
+}
+
 div.list-style-1__info {
 	position: absolute;
 	left: 20px;
@@ -77,6 +81,10 @@ div.list-style-1__info {
 			font-size: fsz(10, 14);
 		}
 	}
+
+	.list-style-2 {
+		column-gap: 20px;
+	}
 }
 
 @media (max-width: 360px) {
@@ -84,6 +92,10 @@ div.list-style-1__info {
 		left: 15px;
 		right: 15px;
 		bottom: 13px;
+	}
+
+	.list-style-2 {
+		column-gap: 15px;
 	}
 }
 

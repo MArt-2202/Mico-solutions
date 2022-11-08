@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	nodeStyles();
 	scrollAnimateNodes({
-		node: 'h1, h2, h3, h4',
+		node: 'h1, h2, h3, h4, .disqus__content em, .disqus-dublicate__content em',
 		animatedClass: 'flipInX',
 	});
 	scrollAnimateNodes({

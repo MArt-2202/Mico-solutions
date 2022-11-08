@@ -36,7 +36,7 @@ textarea {
 input:not([type='checkbox']):not([type='radio']),
 textarea {
 	@include placeholder {
-		color: $c3;
+		color: $c7;
 		text-overflow: ellipsis;
 		opacity: 1;
 	}
@@ -85,13 +85,13 @@ textarea {
 			top: 5px;
 			width: 7px;
 			height: 7px;
-			border: 1px solid $c3;
+			border: 1px solid $c7;
 			background-color: $c1;
 		}
 
 		&:checked+span,
 		&:checked+span {
-			background-color: $c3;
+			background-color: $c7;
 		}
 	}
 }

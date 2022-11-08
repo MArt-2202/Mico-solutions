@@ -257,16 +257,12 @@
 					color: $c12;
 				}
 			}
-
-			.btn-primary {
-				color: $c2;
-			}
 		}
 	}
 
 	.request__back {
 		color: $c1;
-		background-color: $c3;
+		background-color: $c7;
 
 		h4 {
 			color: $c1;
@@ -484,7 +480,7 @@ h1+.top-section__add {
 	li {
 		padding: 30px 35px 26px 105px;
 		color: $c1;
-		background-color: $c3;
+		background-color: $c7;
 
 		&+li {
 			margin-top: 14px;
@@ -719,7 +715,7 @@ h1+.top-section__add {
 		font-size: fsz(15, 16);
 		font-weight: 700;
 		line-height: 1.2;
-		color: $c3;
+		color: $c7;
 	}
 }
 
@@ -862,7 +858,7 @@ h1+.top-section__add {
 
 	li {
 		padding: 30px 35px 32px 35px;
-		background-color: $c3;
+		background-color: $c7;
 	}
 
 	strong,
@@ -959,9 +955,13 @@ h1+.top-section__add {
 	padding-left: 20px;
 	padding-right: 20px;
 
+	h2,
+	h3 {
+		text-align: center;
+	}
+
 	h2 {
 		padding-left: 0;
-		text-align: center;
 	}
 }
 
@@ -1174,9 +1174,14 @@ h1+.top-section__add {
 .disqus-dublicate__content {
 	color: $c1;
 
-	h2 {
+	em {
+		display: block;
+		margin-bottom: 20px;
 		padding-left: 0;
 		font-size: fsz(50, 16);
+		font-weight: 800;
+		font-style: normal;
+		line-height: 1.2;
 		color: $c1;
 	}
 }
@@ -1252,7 +1257,7 @@ h1+.top-section__add {
 
 	.disqus__content,
 	.disqus-dublicate__content {
-		h2 {
+		em {
 			font-size: fsz(40, 16);
 		}
 	}
@@ -1280,7 +1285,7 @@ h1+.top-section__add {
 
 	.disqus__content,
 	.disqus-dublicate__content {
-		h2 {
+		em {
 			font-size: fsz(30, 16);
 		}
 	}
@@ -1339,7 +1344,7 @@ h1+.top-section__add {
 
 	.disqus__content,
 	.disqus-dublicate__content {
-		h2 {
+		em {
 			font-size: fsz(23, 14);
 		}
 	}

@@ -8,7 +8,7 @@ export default function blockPosition() {
 		bl6 = document.querySelector('.header__bl-3'),
 		bl7 = document.querySelector('.header__bl-4'),
 		bl8 = document.querySelector('.disqus strong'),
-		bl9 = document.querySelector('.disqus h2'),
+		bl9 = document.querySelector('.disqus em'),
 		bl10 = document.querySelector('.disqus__content > div:last-child'),
 		bl11 = document.querySelector('.top-section-style-2 .content-2__main'),
 		bl12 = document.querySelector('.top-section-style-2 .content-2__aside'),

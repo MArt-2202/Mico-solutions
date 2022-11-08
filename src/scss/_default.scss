@@ -258,11 +258,21 @@ b {
 		font-size: fsz(14, 16);
 		font-weight: 500;
 		line-height: 1;
-		color: $c16;
+		color: $c7;
+	}
+}
 
-		&:hover {
-			text-decoration: none;
-			color: $c3;
+@media (min-width: 1201px) {
+	.index {
+		.main-nav {
+			a {
+				color: $c3;
+
+				&.active,
+				&:hover {
+					color: $c1;
+				}
+			}
 		}
 	}
 }

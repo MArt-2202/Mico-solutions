@@ -4,6 +4,8 @@ h3,
 h4,
 .disqus__content em,
 .top-section .btn,
+.top-section p,
+.anchor-list li,
 .s_ocial li,
 .contacts__list li,
 .services-list-1 li,
@@ -30,6 +32,8 @@ h4,
 	h4,
 	.disqus__content em,
 	.top-section .btn,
+	.top-section p,
+	.anchor-list li,
 	.s_ocial li,
 	.contacts__list li,
 	.services-list-1 li,
@@ -53,6 +57,18 @@ h4,
 
 
 	@for $i from 1 through 5 {
+		.top-section {
+			p:nth-child(#{$i}) {
+				animation-delay: $i * 0.15s;
+			}
+		}
+
+		.anchor-list {
+			li:nth-child(#{$i}) {
+				animation-delay: $i * 0.15s;
+			}
+		}
+
 		.services__img-#{$i} {
 			animation-delay: $i * 0.15s;
 		}
@@ -128,6 +144,8 @@ h4,
 	h4,
 	.disqus__content em,
 	.top-section .btn,
+	.top-section p,
+	.anchor-list li,
 	.s_ocial li,
 	.contacts__list li,
 	.services-list-1 li,

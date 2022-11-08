@@ -439,7 +439,17 @@ video {
 		margin-bottom: 10px;
 
 		&:not(:last-child) {
+			position: relative;
 			margin-right: 8px;
+			padding-right: 18px;
+
+			&:after {
+				content: '>';
+				position: absolute;
+				top: 5px;
+				right: 0;
+				font-size: fsz(11, 14);
+			}
 		}
 
 		&:last-child {
@@ -452,7 +462,7 @@ video {
 
 	a {
 		font-size: fsz(11, 16);
-		font-weight: 300;
+		// font-weight: 300;
 		line-height: 1.25;
 		color: $c7;
 
@@ -473,6 +483,19 @@ video {
 	.breadcrumbs {
 		&+h1 {
 			margin-top: -10px;
+		}
+
+		li {
+			&:not(:last-child) {
+				&:after {
+					top: 3px;
+					font-size: fsz(11, 14);
+				}
+			}
+		}
+
+		a {
+			font-size: fsz(11, 14);
 		}
 	}
 }

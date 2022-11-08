@@ -1,7 +1,8 @@
 export default function sendFormData({ wrapper, submitBtn, inputs, url, typeForm: type_form }) {
 	if (document.querySelector(submitBtn)) {
 		let sendData = {},
-			data = null;
+			isSend = true,
+			data = new FormData();
 
 		document.querySelector(submitBtn).addEventListener('click', function () {
 			if (
@@ -19,18 +20,19 @@ export default function sendFormData({ wrapper, submitBtn, inputs, url, typeForm
 			inputs.forEach((input) => {
 				sendData[input.key] = document.querySelector(input.tag)?.value;
 				sendData.type_form = type_form;
-				data = JSON.stringify(sendData);
+				isSend = true;
 			});
 
 			inputs.every((input) => {
 				if (document.querySelector(input.tag)?.value === '' && input.required) {
-					data = null;
+					isSend = false;
 					return;
 				}
 			});
 
-			console.log(data);
-			if (data) {
+			if (isSend) {
+				data?.append('json', JSON.stringify(sendData));
+
 				fetch(url, {
 					method: 'POST',
 					body: data,
@@ -44,7 +46,7 @@ export default function sendFormData({ wrapper, submitBtn, inputs, url, typeForm
 						console.log(data);
 					})
 					.catch((error) => {
-						console.log(error);
+						console.error(error);
 					});
 			}
 		});

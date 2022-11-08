@@ -277,6 +277,11 @@ header {
 		a {
 			font-size: fsz(25, 16);
 			font-weight: 700;
+			color: $c1;
+
+			&:hover {
+				color: $c3;
+			}
 		}
 	}
 

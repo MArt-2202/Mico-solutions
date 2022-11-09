@@ -1634,15 +1634,15 @@ h1+.top-section__add {
 	ol,
 	p {
 		font-size: fsz(15, 16);
+
+		strong {
+			font-weight: 700;
+		}
 	}
 
 	ul,
 	ol {
 		line-height: 1.35;
-
-		strong {
-			font-weight: 700;
-		}
 	}
 
 	ol {
@@ -2005,6 +2005,46 @@ h1+.top-section__add {
 
 		li {
 			font-size: fsz(12, 14);
+		}
+	}
+}
+
+.cookies {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 99;
+	background-color: $c1;
+	box-shadow: 1px 1px 4px rgba($cb, 0.4)
+}
+
+.cookies__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-top: 10px;
+	font-size: fsz(12, 16);
+	font-weight: 400;
+
+	div {
+		margin-bottom: 10px;
+
+		&:first-child {
+			flex-grow: 1;
+			padding-right: 10px
+		}
+
+		&:last-child {
+			width: 120px;
+			flex: none;
+		}
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
 }

@@ -1629,10 +1629,43 @@ h1+.top-section__add {
 ============================
 */
 .info {
+
+	ul,
+	ol,
 	p {
 		font-size: fsz(15, 16);
-		font-weight: 300;
+	}
 
+	ul,
+	ol {
+		line-height: 1.35;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+
+	ol {
+		counter-reset: num;
+
+		li {
+			position: relative;
+			padding-left: 20px;
+
+			&:before {
+				content: counter(num)'.';
+				counter-increment: num;
+				position: absolute;
+				top: 3px;
+				left: 0;
+				font-size: fsz(12, 15);
+				font-weight: 500;
+				line-height: 1;
+			}
+		}
+	}
+
+	p {
 		&:last-child {
 			margin-bottom: 0;
 		}

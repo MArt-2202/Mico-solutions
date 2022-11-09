@@ -259,10 +259,40 @@ b {
 		font-weight: 500;
 		line-height: 1;
 		color: $c7;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
 @media (min-width: 1201px) {
+	.main-nav {
+		a {
+			position: relative;
+			padding-bottom: 2px;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				@include trs-all;
+			}
+
+			&.active,
+			&:hover {
+				color: $c3;
+
+				&:after {
+					background-color: $c3;
+				}
+			}
+		}
+	}
+
 	.index {
 		.main-nav {
 			a {
@@ -271,6 +301,10 @@ b {
 				&.active,
 				&:hover {
 					color: $c1;
+
+					&:after {
+						background-color: $c1;
+					}
 				}
 			}
 		}
@@ -448,9 +482,9 @@ video {
 				position: absolute;
 				top: 6px;
 				right: 0;
-				width: 6px;
-				height: 9px;
-				background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.55978 0L5.80273 4.24296L1.55978 8.48592L0.802734 7.72887L4.28865 4.24296L0.802734 0.757042L1.55978 0V0Z' fill='%2308629E'/%3E%3C/svg%3E%0A");
+				width: 5px;
+				height: 8px;
+				background-image: url("data:image/svg+xml,%3Csvg width='5' height='8' viewBox='0 0 5 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.19434 7.4328L4.19434 4.4328L1.19434 1.4328' stroke='%2308629E' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 			}
 		}
 

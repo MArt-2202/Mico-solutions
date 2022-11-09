@@ -11,6 +11,7 @@ import formValidation from './modules/formValidation';
 import sendFormData from './modules/sendFormData';
 import scrollToAnchor from './modules/scrollToAnchor';
 import animatedBackground from './modules/animatedBackground';
+import setCookies from './modules/setCookies';
 
 if ('ontouchstart' in document.documentElement) {
 	document.body.classList.add('touchdevice');
@@ -99,6 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		typeForm: 2,
 	});
 	animatedBackground();
+	if (document.querySelector('#reset-link')) {
+		document.querySelector('#reset-link').addEventListener('click', function () {
+			setCookies({
+				wrapper: '.cookies',
+				node: '#reset-link',
+				url: '/s/set',
+				method: 'POST',
+			});
+		});
+	}
 }); // END READY
 
 window.addEventListener('resize', () => {

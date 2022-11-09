@@ -441,14 +441,16 @@ video {
 		&:not(:last-child) {
 			position: relative;
 			margin-right: 8px;
-			padding-right: 18px;
+			padding-right: 16px;
 
 			&:after {
-				content: '>';
+				content: '';
 				position: absolute;
-				top: 5px;
+				top: 6px;
 				right: 0;
-				font-size: fsz(11, 14);
+				width: 6px;
+				height: 9px;
+				background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.55978 0L5.80273 4.24296L1.55978 8.48592L0.802734 7.72887L4.28865 4.24296L0.802734 0.757042L1.55978 0V0Z' fill='%2308629E'/%3E%3C/svg%3E%0A");
 			}
 		}
 
@@ -488,8 +490,7 @@ video {
 		li {
 			&:not(:last-child) {
 				&:after {
-					top: 3px;
-					font-size: fsz(11, 14);
+					top: 5px;
 				}
 			}
 		}

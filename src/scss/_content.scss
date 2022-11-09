@@ -2036,15 +2036,42 @@ h1+.top-section__add {
 			padding-right: 10px
 		}
 
-		&:last-child {
-			width: 120px;
-			flex: none;
-		}
+
 	}
 
 	p {
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+}
+
+@media (min-width: 1025px) {
+	.cookies__content {
+		div {
+			&:last-child {
+				width: 120px;
+				flex: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.cookies__content {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+@media (max-width: 576px) {
+	.cookies__content {
+		font-size: fsz(12, 14);
+	}
+}
+
+@media (max-width: 415px) {
+	.cookies__content {
+		font-size: fsz(10, 14);
 	}
 }

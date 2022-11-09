@@ -412,6 +412,14 @@ h1+.top-section__add {
 	}
 }
 
+@media (min-width: 1201px) and (max-width: 1366px) {
+	.top-section {
+		.container {
+			padding-top: 150px;
+		}
+	}
+}
+
 @media (min-width: 1231px) {
 	.top-section {
 		.container {
